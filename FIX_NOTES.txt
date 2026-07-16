@@ -1,0 +1,18 @@
+FocusTodo Pro Desktop v1.0.2 修复说明
+
+修复：
+1. 桌面版不再强依赖 Chrome 扩展 API。
+2. Electron preload 未注入时自动切换到 localStorage，按钮和新增功能仍可工作。
+3. 提高 preload 兼容性，关闭 BrowserWindow sandbox。
+4. 增加构建前 JavaScript 语法检查。
+5. 构建命令固定为 --publish never，避免 GH_TOKEN 导致失败。
+
+上传 GitHub 时，必须保留：
+.github/workflows/build-windows.yml
+src/app.js
+src/index.html
+src/styles.css
+src/icons/*
+main.js
+preload.js
+package.json
